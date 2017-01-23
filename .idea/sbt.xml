@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaSbtSettings">
+    <option name="vmParameters" value="-Xms512M -Xmx1024M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M -Dhttp.proxyHost=172.27.15.57 -Dhttp.proxyPort=80 -Dhttps.proxyHost=172.27.15.57 -Dhttps.proxyPort=80" />
+  </component>
+</project>
