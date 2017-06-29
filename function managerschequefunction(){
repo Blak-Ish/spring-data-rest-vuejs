@@ -1,0 +1,42 @@
+function managerschequefunction(){
+            $.post("/managerChequeCount",
+                    function (data){
+
+                       if (data.managerCheque > 0){
+                           $("#managers_cheque_link").addClass("tester");
+                       }
+
+                    }
+            );
+        }
+
+
+
+
+
+
+ setTimeout(function () {
+                updateNotifications();
+                managerschequefunction();
+                @if(AppUser.getCurrentUser.role == Role.CUSTOMER_SERVICE_MANAGER || AppUser.getCurrentUser.role == Role.HEAD_OF_OPERATIONS){
+                getawait();
+                }
+            }, 10000);
+
+
+
+
+
+#managercheque count
+POST      /managerChequeCount                                           controllers.NotificationsController.managerChequeCount()
+
+
+
+ public Result managerChequeCount(){
+        Map<String, Integer> response=new HashMap<>();
+        int value=Util.getManagersChequeCount(AppUser.getCurrentUser());
+        Logger.info("value is "+value);
+        Logger.info("current branch is "+AppUser.getCurrentUser().branch+" with name "+AppUser.getCurrentUser().username);
+        response.put("managerCheque",value);
+        return ok(Json.toJson(response));
+    }

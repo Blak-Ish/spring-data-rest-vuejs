@@ -48,9 +48,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -78,16 +78,7 @@
 					<installDirectory>target</installDirectory>
 				</configuration>
 				<executions>
-					<execution>
-						<id>install node and npm</id>
-						<goals>
-							<goal>install-node-and-npm</goal>
-						</goals>
-						<configuration>
-							<nodeVersion>v4.4.5</nodeVersion>
-							<npmVersion>3.9.2</npmVersion>
-						</configuration>
-					</execution>
+
 					<execution>
 						<id>npm install</id>
 						<goals>

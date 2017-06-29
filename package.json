@@ -1,7 +1,7 @@
 {
-  "name": "leadway",
-  "description": "leadway",
-  "author": "leadway",
+  "name": "springdatavuejs",
+  "description": "spring data rest and vue js boilerplate template",
+  "author": "RasaqAgbas",
   "private": true,
   "scripts": {
     "watchify": "watchify -vd -p browserify-hmr -e src/vue/main.js -o src/main/resources/static/dist/build.js",
